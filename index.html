@@ -3,130 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Material 3 Expressive's flat circular indeterminate progress indicator</title>
-    <style>
-      body {
-        align-items: center;
-        background-color: #fef7ff;
-        block-size: 100dvh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0;
-      }
-      svg {
-        block-size: 50vmin;
-        inline-size: 50vmin;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-      <style>
-        :root {
-          --center: calc(var(--size) / 2);
-          --primary: #6750a4;
-          --secondary-container: #e8def8;
-          --radius: calc((var(--size) / 2) - (var(--thickness) / 2));
-          --size: 40px;
-          --space: 4px;
-          --thickness: 4px;
-          --two-pi: calc(pi * 2);
-          fill: none;
-        }
-        .track, .active-indicator {
-          cx: var(--center);
-          cy: var(--center);
-          r: var(--radius);
-          stroke-linecap: round;
-          stroke-width: var(--thickness);
-        }
-        .track {
-          --track-stroke-dasharray: calc((var(--two-pi) * (var(--size) - var(--space)) / 2 - var(--space)) * var(--track-multiplier) - var(--space) - var(--space)), calc((var(--size) - var(--space)) * var(--two-pi) / 2 - (var(--two-pi) * (var(--size) - var(--space)) / 2 - var(--space)) * var(--track-multiplier) + var(--space) + var(--space));
-          --track-stroke-dashoffset: calc((var(--two-pi) * (var(--size) - var(--space)) / 2 - var(--space)) * var(--track-multiplier) - var(--space) - var(--space) + var(--space) + var(--space));
-          animation: track-grow 6s ease infinite;
-          stroke: var(--secondary-container);
-          stroke-dasharray: var(--track-stroke-dasharray);
-          stroke-dashoffset: var(--track-stroke-dashoffset);
-        }
-        .active-indicator {
-          --active-indicator-stroke-dasharray: calc((var(--two-pi) * (var(--size) - var(--space)) / 2 - var(--space)) * var(--active-indicator-multiplier) - var(--space)), calc((var(--size) - var(--space)) * var(--two-pi) / 2 - (var(--two-pi) * (var(--size) - var(--space)) / 2 - var(--space)) * var(--active-indicator-multiplier) + var(--space));
-          animation: active-indicator-grow 6s ease infinite;
-          stroke: var(--primary);
-          stroke-dasharray: var(--active-indicator-stroke-dasharray);
-        }
-        .container {
-          animation: container-rotate 6s ease infinite;
-          transform-origin: center;
-        }
-        .wrapper {
-          animation: wrapper-rotate 6s linear infinite;
-          transform-origin: center;
-          transform: rotate(-90deg);
-        }
-        @property --track-multiplier {
-          inherits: false;
-          initial-value: 0.84;
-          syntax: '&lt;number&gt;';
-        }
-        @property --active-indicator-multiplier {
-          inherits: false;
-          initial-value: 0.16;
-          syntax: '&lt;number&gt;';
-        }
-        @keyframes track-grow {
-          50% {
-            --track-multiplier: 0.13;
-          }
-          to {
-            --track-multiplier: 0.84;
-          }
-        }
-        @keyframes active-indicator-grow {
-          50% {
-            --active-indicator-multiplier: 0.87;
-          }
-          to {
-            --active-indicator-multiplier: 0.16;
-          }
-        }
-        @keyframes container-rotate {
-          8.33333% {
-            transform: rotate(90deg);
-          }
-          25% {
-            transform: rotate(90deg);
-          }
-          33.3333% {
-            transform: rotate(180deg);
-          }
-          50% {
-            transform: rotate(180deg);
-          }
-          58.3333% {
-            transform: rotate(270deg);
-          }
-          75% {
-            transform: rotate(270deg);
-          }
-          83.3333% {
-            transform: rotate(1turn);
-          }
-          to {
-            transform: rotate(1turn);
-          }
-        }
-        @keyframes wrapper-rotate {
-          to {
-            transform: rotate(990deg);
-          }
-        }
-      </style>
-      <g class="wrapper">
-        <g class="container">
-          <circle class="track" />
-          <circle class="active-indicator" />
-        </g>
-      </g>
-    </svg>
+    <object
+      data="flat-circular-indeterminate-progress-indicator.svg"
+      type="image/svg+xml"
+      role="img"
+      aria-label="Flat circular indeterminate progress indicator"
+    ></object>
   </body>
 </html>

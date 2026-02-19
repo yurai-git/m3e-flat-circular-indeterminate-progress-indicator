@@ -1,0 +1,13 @@
+body {
+  align-items: center;
+  background-color: #fef7ff;
+  block-size: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+object {
+  block-size: 50vmin;
+  inline-size: 50vmin;
+}
