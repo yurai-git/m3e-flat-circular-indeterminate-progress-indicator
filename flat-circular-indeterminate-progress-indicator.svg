@@ -68,28 +68,16 @@
       }
     }
     @keyframes container-rotate {
-      8.33333% {
+      8.33333%, 25% {
         transform: rotate(90deg);
       }
-      25% {
-        transform: rotate(90deg);
-      }
-      33.3333% {
+      33.3333%, 50% {
         transform: rotate(180deg);
       }
-      50% {
-        transform: rotate(180deg);
-      }
-      58.3333% {
+      58.3333%, 75% {
         transform: rotate(270deg);
       }
-      75% {
-        transform: rotate(270deg);
-      }
-      83.3333% {
-        transform: rotate(1turn);
-      }
-      to {
+      83.3333%, to {
         transform: rotate(1turn);
       }
     }
